@@ -32,7 +32,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public ResponseEntity<List<Todo>> createTodo(@RequestBody Todo toCreateTodo){
+    public ResponseEntity<List<Todo>> createTodo(@RequestBody List<Todo> toCreateTodo){
         var todoCreated = todoService.createTodo(toCreateTodo);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()

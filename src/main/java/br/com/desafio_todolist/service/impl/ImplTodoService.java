@@ -24,8 +24,8 @@ public class ImplTodoService implements TodoService {
     }
 
     @Override
-    public List<Todo> createTodo(Todo toCreateTodo) {
-        todoRepository.save(toCreateTodo);
+    public List<Todo> createTodo(List<Todo> toCreateTodo) {
+        todoRepository.saveAll(toCreateTodo);
         return getAllTodo();
     }
 

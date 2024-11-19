@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TodoService {
     Todo findById(Long id);
-    List<Todo> createTodo(Todo toCreateTodo);
+    List<Todo> createTodo(List<Todo> toCreateTodo);
     List<Todo> getAllTodo();
     List<Todo> deleteTodo(Long id);
     List<Todo> updateTodo(Long id, Todo toUpdateTodo);
